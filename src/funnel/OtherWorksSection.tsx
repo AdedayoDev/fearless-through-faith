@@ -44,17 +44,19 @@ interface AuthorBookCardProps {
 function AuthorBookCard({ book, index }: AuthorBookCardProps) {
   const content = (
     <>
-      <div className='author-book-card__cover-wrap'>
+      <div className='p-4 pb-0'>
         <img
           src={book.coverImage}
           alt={`${book.title} cover placeholder`}
-          className='author-book-card__cover'
+          className='block h-[220px] w-full rounded-2xl border border-[rgba(99,74,58,0.12)] bg-[#efe6dd] object-cover min-[641px]:h-[260px]'
         />
       </div>
 
-      <div className='author-book-card__body'>
-        <h3>{book.title}</h3>
-        <p>{book.description}</p>
+      <div className='px-[18px] pb-5 pt-[18px]'>
+        <h3 className='mb-2 text-[1.15rem] leading-[1.4] text-[#1b120d]'>
+          {book.title}
+        </h3>
+        <p className='m-0 leading-[1.65] text-[#51453f]'>{book.description}</p>
       </div>
     </>
   );
@@ -63,7 +65,7 @@ function AuthorBookCard({ book, index }: AuthorBookCardProps) {
     return (
       <a
         href={book.href}
-        className='author-book-card'
+        className='block overflow-hidden rounded-[22px] border border-[rgba(109,82,63,0.12)] bg-white/[0.78] text-inherit no-underline shadow-[0_18px_32px_rgba(39,30,24,0.04)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_22px_36px_rgba(39,29,22,0.08)] motion-safe:animate-[card-in_0.45s_ease_both]'
         style={{ animationDelay: `${index * 100}ms` }}
       >
         {content}
@@ -73,7 +75,7 @@ function AuthorBookCard({ book, index }: AuthorBookCardProps) {
 
   return (
     <article
-      className='author-book-card'
+      className='block overflow-hidden rounded-[22px] border border-[rgba(109,82,63,0.12)] bg-white/[0.78] text-inherit no-underline shadow-[0_18px_32px_rgba(39,30,24,0.04)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_22px_36px_rgba(39,29,22,0.08)] motion-safe:animate-[card-in_0.45s_ease_both]'
       style={{ animationDelay: `${index * 100}ms` }}
     >
       {content}
@@ -83,22 +85,26 @@ function AuthorBookCard({ book, index }: AuthorBookCardProps) {
 
 export function OtherWorksSection() {
   return (
-    <section
-      className='other-works-section'
-      aria-labelledby='other-works-heading'
-    >
-      <div className='other-works__header'>
-        <p className='section-kicker'>Additional resources</p>
-        <h2 id='other-works-heading'>Also by Pastor I.P.A.Y.E. Isaac</h2>
+    <section className='mt-[88px]' aria-labelledby='other-works-heading'>
+      <div className='mb-6'>
+        <p className='mb-2.5 text-[0.75rem] font-bold uppercase tracking-[0.12em] text-[#8b5e34]'>
+          Additional resources
+        </p>
+        <h2
+          id='other-works-heading'
+          className='text-[clamp(2rem,3vw,3rem)] leading-tight tracking-[-0.05em] text-[#1b120d]'
+        >
+          Also by Pastor IPAYE ISAAC
+        </h2>
       </div>
 
-      <div className='author-book-grid'>
+      <div className='grid grid-cols-1 gap-[18px] min-[861px]:grid-cols-2 min-[1101px]:grid-cols-3'>
         {books.map((book, index) => (
           <AuthorBookCard key={book.id} book={book} index={index} />
         ))}
       </div>
 
-      <div className='other-works__cta'>
+      <div className='mt-8 flex justify-center max-[640px]:w-full'>
         <CTAButton
           label='Explore Fearless Through Faith'
           href={SELLER_CHECKOUT_URL}

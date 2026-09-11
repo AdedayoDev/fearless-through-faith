@@ -11,9 +11,9 @@ import { StickyOfferBar } from "./funnel/StickyOfferBar";
 
 function App() {
   return (
-    <div className='page-shell'>
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top,rgba(190,147,98,0.12),transparent_32%),linear-gradient(180deg,#f8f5f1_0%,#fbf9f6_100%)] [font-family:'Avenir_Next','Segoe_UI',sans-serif] text-[#4f453d] antialiased">
       <StickyOfferBar />
-      <main className='page-shell__main'>
+      <main className='mx-auto w-[calc(100%-32px)] max-w-[1200px] pb-20 pt-10 max-[900px]:w-[calc(100%-24px)] max-[900px]:pt-7 max-[640px]:w-[calc(100%-18px)] max-[640px]:pb-14'>
         <HeroSection />
         <PainPointRecognitionSection />
         <MeetAuthorSection />

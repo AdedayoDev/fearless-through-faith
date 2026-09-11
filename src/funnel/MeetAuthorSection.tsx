@@ -57,67 +57,84 @@ export function MeetAuthorSection() {
   const [activeVideo, setActiveVideo] = useState<ProofVideo | null>(null);
 
   return (
-    <section className='meet-author-section' aria-labelledby='author-heading'>
-      <div className='meet-author-section__header'>
-        <p className='section-kicker'>Why this book</p>
-        <h2 id='author-heading'>
+    <section className='mt-[88px] pt-8' aria-labelledby='author-heading'>
+      <div className='mb-6'>
+        <p className='mb-2.5 text-[0.75rem] font-bold uppercase tracking-[0.12em] text-[#8b5e34]'>
+          Why this book
+        </p>
+        <h2
+          id='author-heading'
+          className='m-0 text-[clamp(2rem,3vw,3.2rem)] leading-tight tracking-[-0.05em] text-[#1b120d]'
+        >
           Before you go any further, here&apos;s why this book is worth your
           time.
         </h2>
       </div>
 
-      <div className='author-profile'>
-        <div className='author-profile__image-wrap'>
+      <div className='grid grid-cols-1 items-center gap-7 py-6 min-[861px]:grid-cols-[minmax(240px,360px)_minmax(0,1fr)]'>
+        <div className='flex justify-center'>
           <div
-            className='author-profile__portrait'
+            className='grid aspect-[4/5] w-full max-w-[310px] place-items-center overflow-hidden rounded-[28px] border border-[rgba(109,82,63,0.18)] bg-[linear-gradient(155deg,rgba(183,148,109,0.18),rgba(255,255,255,0.74))] shadow-[0_24px_44px_rgba(45,31,24,0.08)]'
             aria-label='Author portrait placeholder'
           >
-            <span>Pastor Isaac</span>
+            <span className='text-[1.4rem] font-bold tracking-[-0.04em] text-[#1b120d]'>
+              Pastor Isaac
+            </span>
           </div>
         </div>
 
-        <div className='author-profile__content'>
-          <p className='author-profile__intro'>
+        <div className='max-w-[680px]'>
+          <p className='m-0 text-[clamp(1.3rem,2vw,1.8rem)] leading-[1.3] tracking-[-0.03em] text-[#1b120d]'>
             My name is Pastor IPAYE Isaac.
           </p>
-          <p className='author-profile__role'>
+          <p className='mt-2.5 text-[1.08rem] font-semibold text-[#694d37]'>
             Lead Pastor, The Household of Light (THOL), Ogbomosho, Oyo State
           </p>
-          <p className='author-profile__experience'>
+          <p className='mt-[18px] text-[1.08rem] leading-[1.7] text-[#473d37]'>
             I&apos;ve spent {authorYears} teaching, pastoring, and working with
             people through the exact fear this book addresses.
           </p>
         </div>
       </div>
 
-      <div className='proof-videos'>
+      <div className='mt-7 grid grid-cols-1 gap-[18px] min-[861px]:grid-cols-2 min-[1101px]:grid-cols-3'>
         {proofVideos.map((video) => (
-          <article key={video.id} className='proof-video-card'>
+          <article
+            key={video.id}
+            className='flex flex-col overflow-hidden rounded-[22px] border border-[rgba(109,82,63,0.12)] bg-white/[0.62] shadow-[0_18px_32px_rgba(39,30,24,0.04)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_22px_40px_rgba(45,34,28,0.08)]'
+          >
             <button
               type='button'
-              className='proof-video-card__trigger'
+              className='relative block w-full cursor-pointer overflow-hidden border-0 bg-transparent p-0 text-left'
               onClick={() => setActiveVideo(video)}
               aria-label={`Open video: ${video.title}`}
             >
               <VideoFrame
                 youtubeUrl={video.youtubeUrl}
                 title={video.title}
-                className='proof-video-card__video'
+                className='pointer-events-none rounded-none'
               />
-              <span className='proof-video-card__play' aria-hidden='true'>
+              <span
+                className='absolute bottom-3 right-3 flex size-[46px] items-center justify-center rounded-full bg-[rgba(19,13,10,0.66)] text-[1.1rem] text-[#fffaf5] shadow-[0_18px_28px_rgba(0,0,0,0.18)]'
+                aria-hidden='true'
+              >
                 ▶
               </span>
             </button>
 
-            <div className='proof-video-card__body'>
-              <h3>{video.title}</h3>
-              <p>{video.description}</p>
+            <div className='px-[18px] pb-5 pt-[18px]'>
+              <h3 className='mb-2 text-[1.1rem] leading-[1.4] text-[#1b120d]'>
+                {video.title}
+              </h3>
+              <p className='m-0 leading-[1.6] text-[#504741]'>
+                {video.description}
+              </p>
             </div>
           </article>
         ))}
       </div>
 
-      <div className='author-cta-wrap'>
+      <div className='mt-8 flex justify-center max-[640px]:w-full'>
         <CTAButton
           label='Get Fearless Through Faith Now'
           href={SELLER_CHECKOUT_URL}

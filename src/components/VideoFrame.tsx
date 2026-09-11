@@ -17,7 +17,9 @@ export function VideoFrame({
 }: VideoFrameProps) {
   const resolvedEmbedUrl = youtubeUrl ? toEmbedUrl(youtubeUrl) : embedUrl;
 
-  const classes = ["video-frame"];
+  const classes = [
+    "relative w-full bg-[linear-gradient(180deg,rgba(86,61,46,0.14),rgba(33,24,20,0.06))]",
+  ];
 
   if (className) {
     classes.push(className);
@@ -35,6 +37,7 @@ export function VideoFrame({
       aria-label={title}
     >
       <iframe
+        className='h-full w-full rounded-[inherit] border-0 bg-[#1b120d]'
         src={resolvedEmbedUrl}
         title={title}
         loading='lazy'
