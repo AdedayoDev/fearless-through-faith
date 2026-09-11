@@ -1,16 +1,18 @@
 import { useEffect, useRef } from "react";
 
+import { toEmbedUrl } from "./VideoFrame";
+
 export interface VideoLightboxProps {
   isOpen: boolean;
   title: string;
-  videoId: string;
+  youtubeUrl: string;
   onClose: () => void;
 }
 
 export function VideoLightbox({
   isOpen,
   title,
-  videoId,
+  youtubeUrl,
   onClose,
 }: VideoLightboxProps) {
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
@@ -43,7 +45,7 @@ export function VideoLightbox({
     return null;
   }
 
-  const embedUrl = `https://www.youtube.com/embed/${encodeURIComponent(videoId)}?autoplay=1&rel=0&modestbranding=1`;
+  const embedUrl = toEmbedUrl(youtubeUrl, true);
 
   return (
     <div

@@ -8,14 +8,14 @@ import { SELLER_CHECKOUT_URL } from "../config";
 type PersonalVideo = {
   id: string;
   title: string;
-  youtubeId: string;
+  youtubeUrl: string;
   description: string;
 };
 
 const personalVideo: PersonalVideo = {
   id: "pastor-message",
   title: "A personal message from Pastor Isaac",
-  youtubeId: "dQw4w9WgXcQ",
+  youtubeUrl: "https://youtube.com/shorts/raRtAOhu3QA?si=Z7MUCBDEdBys5cer",
   description:
     "A short personal message from Pastor Isaac connected to the message of the book and the journey toward freedom.",
 };
@@ -44,7 +44,7 @@ export function PersonalMessageSection() {
           aria-label={`Open video: ${personalVideo.title}`}
         >
           <VideoFrame
-            videoId={personalVideo.youtubeId}
+            youtubeUrl={personalVideo.youtubeUrl}
             title={personalVideo.title}
             className='personal-message__video'
           />
@@ -71,7 +71,7 @@ export function PersonalMessageSection() {
       <VideoLightbox
         isOpen={isVideoOpen}
         title={personalVideo.title}
-        videoId={personalVideo.youtubeId}
+        youtubeUrl={personalVideo.youtubeUrl}
         onClose={() => setIsVideoOpen(false)}
       />
     </section>

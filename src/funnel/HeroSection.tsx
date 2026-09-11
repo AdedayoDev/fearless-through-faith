@@ -8,8 +8,7 @@ export function HeroSection() {
       <div className='hero-section__content'>
         <div className='hero-section__copy'>
           <p className='hero-section__eyebrow'>
-            Message from Pastor I.P.A.Y.E. Isaac, Lead Pastor, The Household of
-            Light
+            Message from Pastor IPAYE Isaac, Lead Pastor, The Household of Light
           </p>
 
           <h1 id='hero-title'>
@@ -37,17 +36,14 @@ export function HeroSection() {
         <div className='hero-section__media'>
           <div className='media-card'>
             <VideoFrame
-              videoId='dQw4w9WgXcQ'
-              title='Pastor Isaac short teaching clip'
+              youtubeUrl='https://youtube.com/shorts/VD-8N6SgZQM?si=J7LkFZ0PKRgZkQAF'
+              title='Fearless Through Faith YouTube Short'
               className='media-card__video'
             />
 
             <div className='media-card__copy'>
-              <h2>Hear the message behind the book</h2>
-              <p>
-                A brief teaching from Pastor Isaac that introduces the heart of
-                the message and the freedom found in walking by faith.
-              </p>
+              <h2>Fearless Through Faith</h2>
+              <p>Watch the featured YouTube Short.</p>
             </div>
           </div>
         </div>

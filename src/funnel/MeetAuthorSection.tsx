@@ -9,32 +9,49 @@ type ProofVideo = {
   id: string;
   title: string;
   description: string;
-  youtubeId: string;
+  youtubeUrl: string;
 };
 
 const proofVideos: ProofVideo[] = [
   {
     id: "proof-1",
-    title: "A recent teaching on facing fear with faith",
-    description:
-      "A clip from one of my recent teachings on facing fear with faith. You will see exactly the heart behind this book.",
-    youtubeId: "dQw4w9WgXcQ",
+    title: "Fearless Through Faith",
+    description: "Watch the first featured message.",
+    youtubeUrl: "https://youtube.com/shorts/e9FID1wRewk?si=VYkh04bcFyLWeLo0",
   },
   {
     id: "proof-2",
-    title: "Pastor Isaac ministering and teaching",
-    description: "A glimpse of Pastor Isaac ministering and teaching.",
-    youtubeId: "ScMzIvxBSi4",
+    title: "A message of faith",
+    description: "Watch the second featured message.",
+    youtubeUrl: "https://youtube.com/shorts/vqf08_PkIwQ?si=BPz5j1NvCuSXlj_y",
   },
   {
     id: "proof-3",
-    title: "Press and media appearance",
-    description: "A press/media appearance alongside another guest.",
-    youtubeId: "ysz5S6PUM-U",
+    title: "Walking by faith",
+    description: "Watch the third featured message.",
+    youtubeUrl: "https://youtube.com/shorts/MqvQcUellRc?si=QjTt8YoT4yiC1aL6",
+  },
+  {
+    id: "proof-4",
+    title: "A word for the journey",
+    description: "Watch the fourth featured message.",
+    youtubeUrl: "https://youtube.com/shorts/Eec3tQk98c0?si=DKBajIvRhT067kku",
+  },
+  {
+    id: "proof-5",
+    title: "Faith over fear",
+    description: "Watch the fifth featured message.",
+    youtubeUrl: "https://youtube.com/shorts/ZwTSUpNsSLw?si=19PjXJEQZy6amvxG",
+  },
+  {
+    id: "proof-6",
+    title: "A message of hope",
+    description: "Watch the sixth featured message.",
+    youtubeUrl: "https://youtube.com/shorts/raRtAOhu3QA?si=Z7MUCBDEdBys5cer",
   },
 ];
 
-const authorYears = "{X years}";
+const authorYears = "10+ years";
 
 export function MeetAuthorSection() {
   const [activeVideo, setActiveVideo] = useState<ProofVideo | null>(null);
@@ -61,10 +78,10 @@ export function MeetAuthorSection() {
 
         <div className='author-profile__content'>
           <p className='author-profile__intro'>
-            My name is Pastor I.P.A.Y.E. Isaac.
+            My name is Pastor IPAYE Isaac.
           </p>
           <p className='author-profile__role'>
-            Lead Pastor, The Household of Light (THL), Ogbomosho, Oyo State
+            Lead Pastor, The Household of Light (THOL), Ogbomosho, Oyo State
           </p>
           <p className='author-profile__experience'>
             I&apos;ve spent {authorYears} teaching, pastoring, and working with
@@ -83,7 +100,7 @@ export function MeetAuthorSection() {
               aria-label={`Open video: ${video.title}`}
             >
               <VideoFrame
-                videoId={video.youtubeId}
+                youtubeUrl={video.youtubeUrl}
                 title={video.title}
                 className='proof-video-card__video'
               />
@@ -113,7 +130,7 @@ export function MeetAuthorSection() {
       <VideoLightbox
         isOpen={Boolean(activeVideo)}
         title={activeVideo?.title ?? ""}
-        videoId={activeVideo?.youtubeId ?? ""}
+        youtubeUrl={activeVideo?.youtubeUrl ?? ""}
         onClose={() => setActiveVideo(null)}
       />
     </section>

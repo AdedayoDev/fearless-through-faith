@@ -1,5 +1,5 @@
 export interface VideoFrameProps {
-  videoId?: string;
+  youtubeUrl?: string;
   embedUrl?: string;
   title: string;
   aspectRatio?: string;
@@ -8,16 +8,14 @@ export interface VideoFrameProps {
 }
 
 export function VideoFrame({
-  videoId = "pastor-isaac-placeholder-video",
+  youtubeUrl,
   embedUrl,
   title,
   aspectRatio = "16 / 9",
   className,
   poster,
 }: VideoFrameProps) {
-  const resolvedEmbedUrl =
-    embedUrl ??
-    `https://www.youtube.com/embed/${encodeURIComponent(videoId)}?rel=0&modestbranding=1`;
+  const resolvedEmbedUrl = youtubeUrl ? toEmbedUrl(youtubeUrl) : embedUrl;
 
   const classes = ["video-frame"];
 
@@ -46,4 +44,26 @@ export function VideoFrame({
       />
     </div>
   );
+}
+
+export function toEmbedUrl(youtubeUrl: string, autoplay = false) {
+  let url: URL;
+
+  try {
+    url = new URL(youtubeUrl);
+  } catch {
+    return youtubeUrl;
+  }
+
+  const videoId = url.pathname.startsWith("/shorts/")
+    ? url.pathname.split("/")[2]
+    : (url.searchParams.get("v") ?? url.pathname.split("/").pop());
+
+  if (!videoId) {
+    return youtubeUrl;
+  }
+
+  const autoplayQuery = autoplay ? "&autoplay=1" : "";
+
+  return `https://www.youtube.com/embed/${encodeURIComponent(videoId)}?rel=0&modestbranding=1${autoplayQuery}`;
 }
