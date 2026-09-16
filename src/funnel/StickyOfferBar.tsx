@@ -42,7 +42,7 @@ export function StickyOfferBar() {
           </span>
         </div>
 
-        <div
+        {/* <div
           className='flex shrink-0 items-center gap-2.5 max-[900px]:flex-wrap max-[900px]:justify-center'
           aria-label='Time remaining in the launch offer'
         >
@@ -64,7 +64,7 @@ export function StickyOfferBar() {
               seconds
             </span>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

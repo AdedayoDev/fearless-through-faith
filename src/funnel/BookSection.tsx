@@ -34,16 +34,41 @@ const chapters: ChapterPreview[] = [
 const pagePreviews: PagePreview[] = [
   {
     id: "page-1",
-    src: BOOK_PAGE_PREVIEW_PLACEHOLDER,
+    src: "/insight-1.png",
     alt: "Placeholder preview for a page from Fearless Through Faith.",
     title: "Page preview placeholder",
   },
   {
     id: "page-2",
-    src: BOOK_PAGE_PREVIEW_PLACEHOLDER,
+    src: "/insight-2.png",
     alt: "Placeholder preview for another page from Fearless Through Faith.",
     title: "Page preview placeholder",
   },
+  {
+    id: "page-3",
+    src: "/insight-3.png",
+    alt: "Placeholder preview for another page from Fearless Through Faith.",
+    title: "Page preview placeholder",
+  },
+  {
+    id: "page-4",
+    src: "/insight-4.png",
+    alt: "Placeholder preview for another page from Fearless Through Faith.",
+    title: "Page preview placeholder",
+  },
+  {
+    id: "page-5",
+    src: "/insight-5.png",
+    alt: "Placeholder preview for another page from Fearless Through Faith.",
+    title: "Page preview placeholder",
+  },
+  {
+    id: "page-6",
+    src: "/insight-6.png",
+    alt: "Placeholder preview for another page from Fearless Through Faith.",
+    title: "Page preview placeholder",
+  },
+  
 ];
 
 export function BookSection() {

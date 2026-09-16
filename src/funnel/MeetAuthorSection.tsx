@@ -19,12 +19,12 @@ const proofVideos: ProofVideo[] = [
     description: "Watch the first featured message.",
     youtubeUrl: "https://youtube.com/shorts/e9FID1wRewk?si=VYkh04bcFyLWeLo0",
   },
-  {
-    id: "proof-2",
-    title: "A message of faith",
-    description: "Watch the second featured message.",
-    youtubeUrl: "https://youtube.com/shorts/vqf08_PkIwQ?si=BPz5j1NvCuSXlj_y",
-  },
+  // {
+  //   id: "proof-2",
+  //   title: "A message of faith",
+  //   description: "Watch the second featured message.",
+  //   youtubeUrl: "https://youtube.com/shorts/vqf08_PkIwQ?si=BPz5j1NvCuSXlj_y",
+  // },
   {
     id: "proof-3",
     title: "Walking by faith",
@@ -37,18 +37,18 @@ const proofVideos: ProofVideo[] = [
     description: "Watch the fourth featured message.",
     youtubeUrl: "https://youtube.com/shorts/Eec3tQk98c0?si=DKBajIvRhT067kku",
   },
-  {
-    id: "proof-5",
-    title: "Faith over fear",
-    description: "Watch the fifth featured message.",
-    youtubeUrl: "https://youtube.com/shorts/ZwTSUpNsSLw?si=19PjXJEQZy6amvxG",
-  },
-  {
-    id: "proof-6",
-    title: "A message of hope",
-    description: "Watch the sixth featured message.",
-    youtubeUrl: "https://youtube.com/shorts/raRtAOhu3QA?si=Z7MUCBDEdBys5cer",
-  },
+  // {
+  //   id: "proof-5",
+  //   title: "Faith over fear",
+  //   description: "Watch the fifth featured message.",
+  //   youtubeUrl: "https://youtube.com/shorts/ZwTSUpNsSLw?si=19PjXJEQZy6amvxG",
+  // },
+  // {
+  //   id: "proof-6",
+  //   title: "A message of hope",
+  //   description: "Watch the sixth featured message.",
+  //   youtubeUrl: "https://youtube.com/shorts/raRtAOhu3QA?si=Z7MUCBDEdBys5cer",
+  // },
 ];
 
 const authorYears = "10+ years";
@@ -66,8 +66,7 @@ export function MeetAuthorSection() {
           id='author-heading'
           className='m-0 text-[clamp(2rem,3vw,3.2rem)] leading-tight tracking-[-0.05em] text-[#1b120d]'
         >
-          Before you go any further, here&apos;s why this book is worth your
-          time.
+          Meet with the author and get fearless through faith
         </h2>
       </div>
 
@@ -77,9 +76,11 @@ export function MeetAuthorSection() {
             className='grid aspect-[4/5] w-full max-w-[310px] place-items-center overflow-hidden rounded-[28px] border border-[rgba(109,82,63,0.18)] bg-[linear-gradient(155deg,rgba(183,148,109,0.18),rgba(255,255,255,0.74))] shadow-[0_24px_44px_rgba(45,31,24,0.08)]'
             aria-label='Author portrait placeholder'
           >
-            <span className='text-[1.4rem] font-bold tracking-[-0.04em] text-[#1b120d]'>
-              Pastor Isaac
-            </span>
+            <img
+              src='/my-pastor-1.png'
+              alt='Pastor Isaac'
+              className='h-full w-full object-cover object-center'
+            />
           </div>
         </div>
 

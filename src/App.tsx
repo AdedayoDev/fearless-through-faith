@@ -15,13 +15,13 @@ function App() {
       <StickyOfferBar />
       <main className='mx-auto w-[calc(100%-32px)] max-w-[1200px] pb-20 pt-10 max-[900px]:w-[calc(100%-24px)] max-[900px]:pt-7 max-[640px]:w-[calc(100%-18px)] max-[640px]:pb-14'>
         <HeroSection />
-        <PainPointRecognitionSection />
         <MeetAuthorSection />
+        <PainPointRecognitionSection />
         <BookSection />
         <SocialProofSection />
         <OtherWorksSection />
-        <PersonalMessageSection />
-        <OfferStackSection />
+        {/* <PersonalMessageSection /> */}
+        {/* <OfferStackSection /> */}
         <ChoiceSection />
       </main>
     </div>

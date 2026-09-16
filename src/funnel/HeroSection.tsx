@@ -28,7 +28,7 @@ export function HeroSection() {
             that changes everything.
           </p>
 
-          <div className='mt-7 max-[640px]:w-full'>
+          <div className='mt-7 max-[640px]:w-full hidden md:block'>
             <CTAButton
               label='Get Fearless Through Faith Now'
               href={SELLER_CHECKOUT_URL}
@@ -39,10 +39,10 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className='flex justify-center'>
+        <div className='flex-1 flex-col md:flex-row justify-center'>
           <div className='w-full max-w-[560px] rounded-[28px] border border-[rgba(98,73,57,0.12)] bg-white/[0.68] p-4 shadow-[0_20px_48px_rgba(53,39,29,0.08)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_24px_52px_rgba(53,39,29,0.12)]'>
             <VideoFrame
-              youtubeUrl='https://youtube.com/shorts/VD-8N6SgZQM?si=J7LkFZ0PKRgZkQAF'
+              youtubeUrl='https://youtube.com/shorts/6PeDKtXb9J8?si=d0lspXcyv58ZzESI'
               title='Fearless Through Faith YouTube Short'
               className='overflow-hidden rounded-[18px] border border-[rgba(105,79,58,0.18)] bg-[#efe6dd]'
             />
@@ -56,6 +56,18 @@ export function HeroSection() {
               </p>
             </div>
           </div>
+
+
+           <div className='mt-7 max-[640px]:w-full block md:hidden'>
+            <CTAButton
+              label='Get Fearless Through Faith Now'
+              href={SELLER_CHECKOUT_URL}
+              variant='primary'
+              size='lg'
+              external
+            />
+          </div>
+          
         </div>
       </div>
     </section>

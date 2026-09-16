@@ -3,10 +3,10 @@ import { BOOK_COVER_PLACEHOLDER } from "../config";
 const painPoints = [
   "You said you trust God, but fear still makes you make the final decision.",
   "You stayed silent, stayed small, or stayed stuck because moving forward feels too risky.",
-  "You prayed about it, but the anxiety doesn’t leave.",
+  // "You prayed about it, but the anxiety doesn’t leave.",
   "You’ve watched fear cost you an opportunity, a relationship, or a season you can’t get back.",
-  "You know the Scriptures about fear, but knowing them hasn’t been enough.",
-  "You wonder if this is just who you are now.",
+  // "You know the Scriptures about fear, but knowing them hasn’t been enough.",
+  // "You wonder if this is just who you are now.",
 ];
 
 export function PainPointRecognitionSection() {

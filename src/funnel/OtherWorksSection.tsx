@@ -86,7 +86,7 @@ function AuthorBookCard({ book, index }: AuthorBookCardProps) {
 export function OtherWorksSection() {
   return (
     <section className='mt-[88px]' aria-labelledby='other-works-heading'>
-      <div className='mb-6'>
+      {/* <div className='mb-6'>
         <p className='mb-2.5 text-[0.75rem] font-bold uppercase tracking-[0.12em] text-[#8b5e34]'>
           Additional resources
         </p>
@@ -96,15 +96,15 @@ export function OtherWorksSection() {
         >
           Also by Pastor IPAYE ISAAC
         </h2>
-      </div>
+      </div> */}
 
-      <div className='grid grid-cols-1 gap-[18px] min-[861px]:grid-cols-2 min-[1101px]:grid-cols-3'>
+      {/* <div className='grid grid-cols-1 gap-[18px] min-[861px]:grid-cols-2 min-[1101px]:grid-cols-3'>
         {books.map((book, index) => (
           <AuthorBookCard key={book.id} book={book} index={index} />
         ))}
-      </div>
+      </div> */}
 
-      <div className='mt-8 flex justify-center max-[640px]:w-full'>
+      {/* <div className='mt-8 flex justify-center max-[640px]:w-full'>
         <CTAButton
           label='Explore Fearless Through Faith'
           href={SELLER_CHECKOUT_URL}
@@ -112,7 +112,7 @@ export function OtherWorksSection() {
           size='lg'
           external
         />
-      </div>
+      </div> */}
     </section>
   );
 }

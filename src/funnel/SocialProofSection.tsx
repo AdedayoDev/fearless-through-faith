@@ -17,7 +17,7 @@ type Testimonial = {
 const testimonialData: Testimonial[] = [
   {
     id: "testimonial-1",
-    image: "/images/social-proof-placeholder-1.jpg",
+    image: "/social-proof-1.jpeg",
     alt: "Placeholder screenshot of a reader review for Fearless Through Faith",
     quote:
       "This helped me understand what fear was doing in my life and how to respond with faith.",
@@ -27,7 +27,7 @@ const testimonialData: Testimonial[] = [
   },
   {
     id: "testimonial-2",
-    image: "/images/social-proof-placeholder-2.jpg",
+    image: "/social-proof-2.jpeg",
     alt: "Placeholder screenshot of a rating result for Fearless Through Faith",
     quote:
       "The message was clear, practical, and deeply relevant to what I was facing.",
@@ -37,7 +37,7 @@ const testimonialData: Testimonial[] = [
   },
   {
     id: "testimonial-3",
-    image: "/images/social-proof-placeholder-3.jpg",
+    image: "/social-proof-3.jpeg",
     alt: "Placeholder screenshot of a review card for Fearless Through Faith",
     quote:
       "I finally had language for the fear I was wrestling with and a pathway forward.",
@@ -47,7 +47,7 @@ const testimonialData: Testimonial[] = [
   },
   {
     id: "testimonial-4",
-    image: "/images/social-proof-placeholder-4.jpg",
+    image: "/social-proof-4.jpeg",
     alt: "Placeholder screenshot of a reader testimonial for Fearless Through Faith",
     quote: "It felt personal, biblical, and practical at the same time.",
     reviewerName: "Reader",
