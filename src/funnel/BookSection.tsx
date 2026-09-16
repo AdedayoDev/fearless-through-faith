@@ -4,7 +4,7 @@ import { CTAButton } from "../components/CTAButton";
 import { ImageLightbox } from "../components/ImageLightbox";
 import {
   BOOK_COVER_PLACEHOLDER,
-  BOOK_PAGE_PREVIEW_PLACEHOLDER,
+  // BOOK_PAGE_PREVIEW_PLACEHOLDER,
   SELLER_CHECKOUT_URL,
 } from "../config";
 

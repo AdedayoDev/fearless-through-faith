@@ -1,30 +1,30 @@
-import { useEffect, useMemo, useState } from "react";
+// import { useEffect, useMemo } from "react";
 
-import { getCountdownParts } from "./countdown";
+// import { getCountdownParts } from "./countdown";
 
-const OFFER_DURATION_MS = 48 * 60 * 60 * 1000;
+// const OFFER_DURATION_MS = 48 * 60 * 60 * 1000;
 
 export function StickyOfferBar() {
-  const offerEndsAt = useMemo(() => Date.now() + OFFER_DURATION_MS, []);
-  const [remainingMs, setRemainingMs] = useState(() =>
-    Math.max(0, offerEndsAt - Date.now()),
-  );
+  // const offerEndsAt = useMemo(() => Date.now() + OFFER_DURATION_MS, []);
+  // const [remainingMs, setRemainingMs] = useState(() =>
+  //   Math.max(0, offerEndsAt - Date.now()),
+  // );
 
-  useEffect(() => {
-    const updateRemaining = () => {
-      setRemainingMs(Math.max(0, offerEndsAt - Date.now()));
-    };
+  // useEffect(() => {
+  //   const updateRemaining = () => {
+  //     setRemainingMs(Math.max(0, offerEndsAt - Date.now()));
+  //   };
 
-    updateRemaining();
+  //   updateRemaining();
 
-    const timerId = window.setInterval(updateRemaining, 1000);
+  //   const timerId = window.setInterval(updateRemaining, 1000);
 
-    return () => {
-      window.clearInterval(timerId);
-    };
-  }, [offerEndsAt]);
+  //   return () => {
+  //     window.clearInterval(timerId);
+  //   };
+  // }, [offerEndsAt]);
 
-  const countdown = getCountdownParts(remainingMs);
+  // const countdown = getCountdownParts(remainingMs);
 
   return (
     <div
