@@ -8,13 +8,6 @@ import {
   SELLER_CHECKOUT_URL,
 } from "../config";
 
-type ChapterPreview = {
-  chapterNumber: number;
-  title: string;
-  hook: string;
-  pageImage?: string;
-};
-
 type PagePreview = {
   id: string;
   src: string;
@@ -22,14 +15,14 @@ type PagePreview = {
   title: string;
 };
 
-const chapters: ChapterPreview[] = [
-  {
-    chapterNumber: 1,
-    title:
-      "Recognize the specific fears facing you before you make the decision.",
-    hook: "Chapter-specific practical hook to be supplied.",
-  },
-];
+// const chapters: ChapterPreview[] = [
+//   {
+//     chapterNumber: 1,
+//     title:
+//       "Recognize the specific fears facing you before you make the decision.",
+//     hook: "Chapter-specific practical hook to be supplied.",
+//   },
+// ];
 
 const pagePreviews: PagePreview[] = [
   {
@@ -68,7 +61,6 @@ const pagePreviews: PagePreview[] = [
     alt: "Placeholder preview for another page from Fearless Through Faith.",
     title: "Page preview placeholder",
   },
-  
 ];
 
 export function BookSection() {
@@ -108,10 +100,8 @@ export function BookSection() {
 
         <div>
           <div className='pt-2'>
-            <h3 className='mb-[18px] text-[clamp(1.5rem,2vw,2rem)] tracking-[-0.04em] text-[#1b120d]'>
-              Inside this book, you will discover how to...
-            </h3>
-            <div className='grid gap-4'>
+            <h3 className='mb-[18px] text-[clamp(1.5rem,2vw,2rem)] tracking-[-0.04em] text-[#1b120d]'></h3>
+            {/* <div className='grid gap-4'>
               {chapters.map((chapter) => (
                 <article
                   key={chapter.chapterNumber}
@@ -130,7 +120,7 @@ export function BookSection() {
                   </div>
                 </article>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -164,6 +154,22 @@ export function BookSection() {
       </div>
 
       <div className='mt-8 flex justify-center max-[640px]:w-full'>
+        <div className='mb-5 w-full max-w-[460px] rounded-[18px] border border-[rgba(120,82,41,0.16)] bg-[linear-gradient(135deg,rgba(255,255,255,0.82),rgba(250,239,222,0.78))] px-5 py-4 text-center shadow-[0_14px_28px_rgba(44,33,27,0.06)]'>
+          <p className='m-0 text-[0.75rem] font-bold uppercase tracking-[0.1em] text-[#8b5e34]'>
+            Fearless discount price
+          </p>
+          <div className='mt-1 flex flex-wrap items-baseline justify-center gap-2.5'>
+            <span className='text-[1rem] text-[#7c6d63] line-through'>
+              ₦3,999
+            </span>
+            <strong className='text-[clamp(1.8rem,5vw,2.4rem)] leading-none tracking-[-0.04em] text-[#1b120d]'>
+              ₦2,499
+            </strong>
+          </div>
+        </div>
+      </div>
+
+      <div className='flex justify-center max-[640px]:w-full'>
         <CTAButton
           label='Get Fearless Through Faith Now'
           href={SELLER_CHECKOUT_URL}

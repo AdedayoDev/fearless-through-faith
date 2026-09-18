@@ -16,7 +16,7 @@ const proofVideos: ProofVideo[] = [
   {
     id: "proof-1",
     title: "Fearless Through Faith",
-    description: "Watch the first featured message.",
+    description: "In case you missed the video above, here's another one for you",
     youtubeUrl: "https://youtube.com/shorts/e9FID1wRewk?si=VYkh04bcFyLWeLo0",
   },
   // {
@@ -28,13 +28,13 @@ const proofVideos: ProofVideo[] = [
   {
     id: "proof-3",
     title: "Walking by faith",
-    description: "Watch the third featured message.",
+    description: "Listen to what the author said below aout the authority you have",
     youtubeUrl: "https://youtube.com/shorts/MqvQcUellRc?si=QjTt8YoT4yiC1aL6",
   },
   {
     id: "proof-4",
     title: "A word for the journey",
-    description: "Watch the fourth featured message.",
+    description: "",
     youtubeUrl: "https://youtube.com/shorts/Eec3tQk98c0?si=DKBajIvRhT067kku",
   },
   // {
@@ -57,18 +57,18 @@ export function MeetAuthorSection() {
   const [activeVideo, setActiveVideo] = useState<ProofVideo | null>(null);
 
   return (
-    <section className='mt-[88px] pt-8' aria-labelledby='author-heading'>
-      <div className='mb-6'>
-        <p className='mb-2.5 text-[0.75rem] font-bold uppercase tracking-[0.12em] text-[#8b5e34]'>
+    <section className='mt-[88px] md:pt-8' aria-labelledby='author-heading'>
+      {/* <div className='mb-6'>
+        <p className='mb-2.5 text-[0.75rem] font-bold uppercase tracking-[0.12em] text-[#8b5e34] text-center md:text-left'>
           Why this book
         </p>
         <h2
           id='author-heading'
-          className='m-0 text-[clamp(2rem,3vw,3.2rem)] leading-tight tracking-[-0.05em] text-[#1b120d]'
+          className='m-0 text-[clamp(2rem,3vw,3.2rem)] text-center md:text-left leading-tight tracking-[-0.05em] text-[#1b120d]'
         >
           Meet with the author and get fearless through faith
         </h2>
-      </div>
+      </div> */}
 
       <div className='grid grid-cols-1 items-center gap-7 py-6 min-[861px]:grid-cols-[minmax(240px,360px)_minmax(0,1fr)]'>
         <div className='flex justify-center'>

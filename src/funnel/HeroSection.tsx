@@ -40,6 +40,19 @@ export function HeroSection() {
         </div>
 
         <div className='flex-1 flex-col md:flex-row justify-center'>
+<div className='mb-6'>
+        {/* <p className='mb-2.5 text-[0.75rem] font-bold uppercase tracking-[0.12em] text-[#8b5e34] text-center md:text-left'>
+          Why this book
+        </p> */}
+        <h2
+          id='author-heading'
+          className='m-0 text-xl text-center md:text-left leading-tight tracking-[-0.05em] text-[#1b120d]'
+        >
+          Meet with the author and get fearless through faith
+        </h2>
+      </div>
+
+        
           <div className='w-full max-w-[560px] rounded-[28px] border border-[rgba(98,73,57,0.12)] bg-white/[0.68] p-4 shadow-[0_20px_48px_rgba(53,39,29,0.08)] transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_24px_52px_rgba(53,39,29,0.12)]'>
             <VideoFrame
               youtubeUrl='https://youtube.com/shorts/6PeDKtXb9J8?si=d0lspXcyv58ZzESI'
@@ -51,9 +64,9 @@ export function HeroSection() {
               <h2 className='mb-2.5 text-[clamp(1.5rem,2vw,2rem)] tracking-[-0.04em] text-[#1b120d]'>
                 Fearless Through Faith
               </h2>
-              <p className='m-0 text-base leading-[1.6] text-[#504741]'>
+              {/* <p className='m-0 text-base leading-[1.6] text-[#504741]'>
                 Watch the featured YouTube Short.
-              </p>
+              </p> */}
             </div>
           </div>
 

@@ -1,4 +1,5 @@
 import { CTAButton } from "../components/CTAButton";
+import { OfferCountdown } from "../components/OfferCountdown";
 import { SELLER_CHECKOUT_URL } from "../config";
 import { ChoiceItem } from "./ChoiceItem";
 
@@ -27,6 +28,10 @@ export function ChoiceSection() {
       className='relative mt-[68px] overflow-hidden rounded-3xl border border-[rgba(181,147,112,0.18)] bg-[radial-gradient(circle_at_top,rgba(145,111,73,0.12),transparent_26%),linear-gradient(180deg,rgba(21,15,11,0.98),rgba(34,25,18,0.96))] px-4 pb-[26px] pt-9 shadow-[0_28px_60px_rgba(18,12,8,0.18)] min-[641px]:mt-24 min-[641px]:px-7 min-[641px]:pb-[38px] min-[641px]:pt-[54px]'
       aria-labelledby='choice-heading'
     >
+      <div className='relative z-[1] mb-7 flex justify-center'>
+        <OfferCountdown />
+      </div>
+
       <div className='relative z-[1] mb-7 text-center'>
         <p className='mb-2.5 text-[0.75rem] font-bold uppercase tracking-[0.12em] text-[#8b5e34]'>
           The decision
@@ -50,7 +55,20 @@ export function ChoiceSection() {
         ))}
       </div>
 
-      <div className='relative z-[1] mt-8 flex justify-center max-[640px]:w-full'>
+      <div className='relative z-[1] mt-8 flex flex-col items-center gap-5 max-[640px]:w-full'>
+        <div className='w-full max-w-[460px] rounded-[18px] border border-[rgba(214,173,116,0.3)] bg-[rgba(255,247,239,0.08)] px-5 py-4 text-center'>
+          <p className='m-0 text-[0.72rem] font-bold uppercase tracking-[0.1em] text-[#d9b27d]'>
+            Fearless discount price
+          </p>
+          <div className='mt-1 flex flex-wrap items-baseline justify-center gap-2.5'>
+            <span className='text-[1rem] text-[rgba(244,232,222,0.65)] line-through'>
+              ₦3,999
+            </span>
+            <strong className='text-[clamp(1.8rem,5vw,2.4rem)] leading-none tracking-[-0.04em] text-[#fff7ef]'>
+              ₦2,499
+            </strong>
+          </div>
+        </div>
         <CTAButton
           label='Get Fearless Through Faith Now'
           href={SELLER_CHECKOUT_URL}
