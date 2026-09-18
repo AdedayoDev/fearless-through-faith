@@ -1,5 +1,6 @@
 import { BookSection } from "./funnel/BookSection";
 import { ChoiceSection } from "./funnel/ChoiceSection";
+import { ConsultationIncentiveSection } from "./funnel/ConsultationIncentiveSection";
 import { HeroSection } from "./funnel/HeroSection";
 import { MeetAuthorSection } from "./funnel/MeetAuthorSection";
 // import { OfferStackSection } from "./funnel/OfferStackSection";
@@ -22,6 +23,7 @@ function App() {
         <OtherWorksSection />
         {/* <PersonalMessageSection /> */}
         {/* <OfferStackSection /> */}
+        <ConsultationIncentiveSection />
         <ChoiceSection />
       </main>
     </div>
